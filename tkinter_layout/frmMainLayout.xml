@@ -1,0 +1,103 @@
+<!-- 
+  
+  tkinter framework layout
+
+  Realizzato da
+  Formisano Massimo
+  Nazione : Italia
+  Citta' : Roma
+  Cap : 00168
+  Cellulare : 336430347
+  email : borlisdeveloper@hotmail.com
+
+ -->
+<Root id="root">
+
+	<Menu id="menumain" width="0">
+
+		<Menu id="file" width="0" label="File">
+			<Menuitem id="item_file1" command="label='item1', command=parent.itemfile1"/>
+			<Menuitem id="item_file2" command="label='item2', command=parent.itemfile2"/>
+			<Separator id="separator_file1"/>
+			<Menuitem id="item_file3" command="label='item3', command=parent.itemfile3"/>
+		</Menu>
+
+		<Menu id="help" width="0" label="Help">
+			<Menuitem id="item_help1" command="label='item1', command=parent.itemhelp1"/>
+			<Separator id="separator_help1"/>
+			<Menuitem id="item_help2" command="label='item2', command=parent.itemhelp2"/>
+			<Menuitem id="item_help3" command="label='item3', command=parent.itemhelp3"/>
+		</Menu>
+
+	</Menu>
+
+	<Frame id="frame1" relief="GROOVE" 
+			border="5" padx="10" pady="10" 
+			grid="row=0, column=0, pady=4, padx=4">
+
+		<Button id="btnUno" text="'Button 1'"
+			command="parent.evento1" grid="row=0, column=0, pady=4, padx=4" />
+
+		<Button id="btnDue" text="'Button 2'"
+			command="parent.evento2" grid="row=1, column=0, pady=4, padx=4" />
+
+		<Button id="btnTre" text="'Button 3'"
+			command="parent.evento3" grid="row=2, column=0, pady=4, padx=4" />
+
+		<Button id="btnQuattro" text="'Button 4'"
+			command="parent.evento4" grid="row=3, column=0, pady=4, padx=4" />
+
+		<Button id="btnCinque" text="'Button 5'"
+			command="parent.evento5" grid="row=4, column=0, pady=4, padx=4" />
+
+	</Frame>
+
+	<Frame id="frame2" relief="GROOVE" 
+			border="5" padx="10" pady="10" 
+			grid="row=1, column=0, pady=4, padx=4">
+
+		<Label id="lblTest" text="'Test label'" pack="side=LEFT" />
+
+		<Entry id="entTest" pack="side=LEFT" width="30" />
+
+	</Frame>
+
+	<Frame id="frame3" relief="GROOVE" 
+			border="5" padx="10" pady="10" 
+			grid="row=2, column=0, pady=4, padx=4">
+
+		<Scrollbar id="scrollbar" orient="VERTICAL" pack="side=RIGHT, fill=Y" command="Widgets['listbox'].yview" />
+
+		<Listbox id="listbox" width="14" font="('courier', 8, 'bold')" pack="" yscrollcommand="Widgets['scrollbar'].set" />
+
+	</Frame>
+
+	<Frame id="frame4" relief="GROOVE" border="5" padx="10" pady="10" grid="row=0, column=1, pady=4, padx=4">
+
+		<Checkbutton id="checkbutton" text="'checkbutton label'" 
+					grid="row=0, column=0, pady=4, padx=4" />
+
+		<Radiobutton id="radiobutton" idintvar="radiobutton" 
+					value="1" text="'radiobutton label1'" 
+					grid="row=1, column=0, pady=4, padx=4" />
+
+		<Radiobutton id="radiobutton1" idintvar="radiobutton" 
+					value="2" text="'radiobutton label2'" 
+					grid="row=2, column=0, pady=4, padx=4" />
+
+		<ttk.Combobox id="combobox" text="'combobox'" grid="row=3, column=0, pady=4, padx=4" />
+
+	</Frame>
+
+	<ttk.Progressbar id="progressbar" maximum="200" value="100" length="400" 
+		grid="row=1, column=1, pady=4, padx=4" />
+
+
+	<Canvas id="canvas" width="200" height="200" bg="'#FF0000'"
+		grid="row=0, column=2, pady=4, padx=4" />
+
+<!--	
+	<ttk.Notebook id="notebook" width="400" height="200" grid="row=2, column=1, pady=4, padx=4" />
+	-->
+
+</Root>

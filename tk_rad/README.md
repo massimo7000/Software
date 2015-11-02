@@ -1,4 +1,3 @@
-
 Tkinter Rad layout
 
 Eseguire il file tk_rad.py per creare o modificare layout
